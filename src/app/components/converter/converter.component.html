@@ -1,0 +1,19 @@
+<div class="convert_conteiner">
+<label for="first">Base curency
+    <input #amBase  (keyup)="getBaseVal(amBase.value)" type="number" id="amount-base" placeholder="0" value="{{baseVal}}">
+    <select #curSelBase (change)='curBase(curSelBase.value)' name="cur-select-base" id="cur-selector-base" >
+        <option value="uah">uah</option>
+        <option value="usd">usd</option>
+        <option value="eur" selected >eur</option>
+    </select>
+</label>
+
+<label for="second"> Exchange curency
+    <input #amEx (keyup)="getExValue(amEx.value)" type="number" id="amount-ex" value="{{exVal}}">
+    <select #curSelEx (change)='curEx(curSelEx.value)' name="cur-select-ex" id="cur-selector-ex" >
+        <option value="uah" selected >uah</option>
+        <option value="usd">usd</option>
+        <option value="eur">eur</option>
+    </select>
+</label>
+</div>
