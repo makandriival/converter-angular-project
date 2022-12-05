@@ -2,7 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin: 0.7rem; */
+  box-shadow: rgba(0, 104, 216, 0.434) 0px 20px 30px -10px;
+  border-radius: 1rem;
+  background-color: rgba(215, 248, 250, 0.461);
+  /* border: solid 3px yellow; */
+    padding: 1rem;
+    margin: 1rem;
 }
 label {
   margin: 0.7rem;
@@ -10,4 +15,9 @@ label {
   gap: 0.3rem;
 
   max-width: 1000px;
+}
+
+a{
+  position: fixed;
+  bottom: 3rem;
 }

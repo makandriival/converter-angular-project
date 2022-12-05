@@ -1,3 +1,11 @@
-<app-header></app-header>
+<div class="parent">
+    <span>{{
+        this.usd === 0 
+        ? 'api error! - to many requests!'
+        : 'api works!'
+    }}
+</span>
 
-<app-converter></app-converter>
+    <app-header [eur]="eur" [usd]="usd"  ></app-header>
+    <app-converter [eurRate]="eur" [usdRate]="usd" ></app-converter>
+</div>

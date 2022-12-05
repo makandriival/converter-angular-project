@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input , OnInit } from '@angular/core';
 
 
 
@@ -9,30 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  
-
-  usd = localStorage.getItem('usSale');
-  eur = localStorage.getItem('eurSale');
-
-
-  // usd: number= 5;
-  // eur: number= 10;
-  // uah: number= 2;
+  @Input() usd = 0;
+  @Input() eur = 0;
 
   constructor() { 
     
    }
 
   ngOnInit(): void {
-    fetch("https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11")
-    .then(function(resp) {
-      return resp.json();
-    }).then(function(data){
-      const usRate = data[0].sale ;
-      const eurRate = data[1].sale;``
-      localStorage.setItem('usSale', usRate);
-      localStorage.setItem('eurSale', eurRate);
-    });
   }
 
 }

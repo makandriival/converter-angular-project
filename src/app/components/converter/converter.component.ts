@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, Input } from '@angular/core';
 
 import { ElementRef, ViewChild } from '@angular/core';
 
@@ -9,13 +9,18 @@ import { ElementRef, ViewChild } from '@angular/core';
 })
 export class ConverterComponent implements OnInit {
   
+  @Input() eurRate = 0;
+  @Input() usdRate = 0;
+
   baseVal = 0;
   exVal = 0;
   baseCur = 'eur'; 
   exCur = 'uah'; 
 
-  eurRate = Number(localStorage.getItem('eurSale'));
-  usdRate = Number(localStorage.getItem('usSale'));
+
+
+  // eurRate = Number(localStorage.getItem('eurSale'));
+  // usdRate = Number(localStorage.getItem('usSale'));
 
   getBaseVal(val:string){
     this.baseVal = Number(val), this.baseExchange();  
